@@ -1,0 +1,13 @@
+{
+  "name": "blog-statics",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:mephistophelius/blog-statics.git",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel serve src/*.html"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}

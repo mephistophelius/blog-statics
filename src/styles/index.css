@@ -131,14 +131,17 @@ table {
 }
 
 .article-info {
+  --main-alpha: .7;
+  
   font-family: 'Fira Code', monospace;
   color: hsla( var(--main-hue), var(--main-saturation), var(--main-lightness), var(--main-alpha) );
-  --main-alpha: .5;
+  margin-block-end: 0.5rem;
 }
 
 .article-info time {
   background-color: initial;
   color: inherit;
+  padding: 0;
 }
 
 .header {
@@ -210,3 +213,16 @@ table {
   padding-top: 0;
 }
 
+.article-tag-list {
+  --links: hsl(0, 0%, 48.6%);
+}
+
+.article-tag-list li {
+  margin-inline-end: 1rem;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  border: 1px solid #302d3f;
+  background: transparent;
+}

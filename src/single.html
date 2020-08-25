@@ -6,7 +6,10 @@
 	<title>Main — Sam Bulatov blog</title>
 
 	<link rel="stylesheet" href="styles/base.css">
+	<link rel="stylesheet" href="styles/prism.css">
 	<link rel="stylesheet" href="styles/index.css">
+
+	<script src="scripts/prism.js"></script>
 </head>
 <body class='body'>
 <header class='header is-has-max-width'>
@@ -38,11 +41,21 @@
 <main class='main is-has-max-width'>
 	<div class="article-header">
 		<h1 class="article-title">Как Angular синхронизирует модель и представление? Что такое ChangeDetection?</h1>
+
 		<div class="article-info">
 			<time class="article-publish-time">2019-05-10</time>
 			[Обновлено: <time class="artile-update-time">2019-09-03</time>]
 			::
 			<span class="article-author">Сэм Булатов</span>
+		</div>
+
+		<div class="article-tags">
+			<ul class="article-tag-list is-horizontal-list">
+
+				<li><a href="#">css</a></li>
+				<li><a href="#">html</a></li>
+				<li><a href="#">javascript</a></li>
+			</ul>
 		</div>
 	</div>
 
@@ -174,6 +187,37 @@
 P Q R S T U V W X Y Z [ \ ] ^ _
 ` a b c d e f g h i j k l m n o
 p q r s t u v w x y z { | } ~ </pre>
+
+				<pre>
+					<code class="language-css">
+						.article-info {
+						  --main-alpha: .7;
+
+						  font-family: 'Fira Code', monospace;
+						  color: hsla( var(--main-hue), var(--main-saturation), var(--main-lightness), var(--main-alpha) );
+						  margin-block-end: 0.5rem;
+						}
+
+						.article-info time {
+						  background-color: initial;
+						  color: inherit;
+						  padding: 0;
+						}
+					</code>
+				</pre>
+
+				<pre>
+					<code class="language-ts">
+						import { SelectionOptionChange } from 'pmk/ui/forms/option/models'
+
+						export interface SelectItem<T> {
+						  value: T
+						  viewValue: string
+						  disabled?: boolean
+						}
+					</code>
+				</pre>
+
 			</div>
 			<footer><p><a href="#top">[Top]</a></p></footer>
 		</article>

@@ -9,5 +9,8 @@
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "clipboard": "^2.0.6"
   }
 }

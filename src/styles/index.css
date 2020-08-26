@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 code, samp, time {
-  --main-alpha: .23;
+  --main-alpha: .1;
   
   background: hsla(
     var(--main-hue),
@@ -112,6 +112,17 @@ table {
   margin: 1rem 0;
 }
 
+mark {
+  --main-alpha: 0.8;
+  background-color: hsla(
+    var(--main-hue),
+    var(--main-saturation),
+    var(--main-lightness),
+    var(--main-alpha)
+  );
+  border-radius: 0;
+}
+
 .article-title {
   position: relative;
   margin: 0.3rem 0 1.5rem 0;
@@ -162,6 +173,16 @@ table {
   display: flex;
 }
 
+ul.without-list-style,
+ol.without-list-style {
+  list-style: none;
+}
+
+ul.without-list-style li::before,
+ol.without-list-style li::before {
+  content: none;
+}
+
 .is-horizontal-list li::before {
   content: '';
 }
@@ -199,13 +220,19 @@ table {
   list-style: none;
 }
 
-.article-list time {
+.article-list time,
+ time {
   border-radius: 0;
   background-color: initial;
   padding: 0;
   color: var(--text-main);
-  margin-inline-end: 0.8rem;
   font-family: monospace;
+}
+
+.article-list .separator,
+.talk-list .separator {
+  display: inline-block;
+  margin-inline-end: 0.3rem;
 }
 
 .footer {

@@ -1,0 +1,17 @@
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+(-[a-z]+.[0-9]+)?'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          registry-url: https://registry.npmjs.org/
+      - name: Check NodeJS environment
+        run: |
+          echo "NodeJS: ${{ node -v }}"
+          echo "NPM: ${{ npm -v }}"
+          echo "NPX: ${{ npx -v }}"
